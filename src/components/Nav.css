@@ -1,0 +1,20 @@
+nav {
+    grid-area: nav;
+    background-color: brown;
+}
+
+nav ul {
+    background-color: crimson;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+  
+nav ul li {
+    background-color: cornflowerblue;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
