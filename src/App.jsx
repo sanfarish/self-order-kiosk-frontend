@@ -1,21 +1,30 @@
 import './App.css'
-import Header from './components/Header'
-import Nav from './components/Nav'
-import Aside from './components/Aside'
-import Main from './components/Main'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import KioskPage from './routes/KioskPage';
+import ErrorPage from './routes/ErrorPage';
+import AdminPage from './routes/AdminPage';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <KioskPage />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "admin",
+    element: <AdminPage />
+  }
+]);
 
 function App() {
 
   return (
-    <div className='container'>
-      <Header />
-      
-      <Nav />
-      
-      <Aside />
-      
-      <Main />
-    </div>
+    <>
+      <RouterProvider router={router} />
+    </>
   )
 }
 
