@@ -6,6 +6,8 @@ import {
 import KioskPage from './routes/KioskPage';
 import ErrorPage from './routes/ErrorPage';
 import AdminPage from './routes/AdminPage';
+import TestPage from './routes/TestPage';
+import { CssBaseline } from '@mui/material';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "admin",
     element: <AdminPage />
+  },
+  {
+    path: "test",
+    element: <TestPage />
   }
 ]);
 
@@ -23,6 +29,7 @@ function App() {
 
   return (
     <>
+      <CssBaseline />
       <RouterProvider router={router} />
     </>
   )
